@@ -1,20 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="/app.css">
-    <title>Me Blog</title>
-</head>
-<body>
-<article>
-    <h1>
-        <?= $post->title ?>
-    </h1>
-    <p><?= $post->body ?></p>
-</article>
+<x-layout>
+    <article>
+        <h1>
+            {{ $post->title }}
+        </h1>
+        <p>{{ $post->body }}</p>
+    </article>
 
-<a href="/">Go Back</a>
-</body>
-</html>
+    <a href="/">Go Back</a>
+</x-layout>

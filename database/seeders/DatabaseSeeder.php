@@ -32,14 +32,24 @@ class DatabaseSeeder extends Seeder
             'slug' => 'person',
         ]);
 
-        Post::factory(2)->create([
+        $magnet = Category::factory()->create([
+            'name' => 'Magnet',
+            'slug' => 'magnet',
+        ]);
+
+        Post::factory(3)->create([
             'user_id' => $user->id,
             'category_id' => $poodle->id,
         ]);
 
-        Post::factory(2)->create([
+        Post::factory(3)->create([
             'user_id' => $user->id,
             'category_id' => $person->id,
+        ]);
+
+        Post::factory(3)->create([
+            'user_id' => $user->id,
+            'category_id' => $magnet->id,
         ]);
     }
 }

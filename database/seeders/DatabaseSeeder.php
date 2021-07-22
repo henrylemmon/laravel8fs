@@ -16,10 +16,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::factory()->create([
+        $henry = User::factory()->create([
             'name' => 'Henry',
             'username' => 'henrylemmon',
             'email' => 'henry@mail.com',
+        ]);
+
+        $asshole = User::factory()->create([
+            'name' => 'Asshole',
+            'username' => 'asshole',
+            'email' => 'asshole@mail.com',
         ]);
 
         $poodle = Category::factory()->create([
@@ -38,17 +44,32 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Post::factory(3)->create([
-            'user_id' => $user->id,
+            'user_id' => $henry->id,
             'category_id' => $poodle->id,
         ]);
 
         Post::factory(3)->create([
-            'user_id' => $user->id,
+            'user_id' => $henry->id,
             'category_id' => $person->id,
         ]);
 
         Post::factory(3)->create([
-            'user_id' => $user->id,
+            'user_id' => $henry->id,
+            'category_id' => $magnet->id,
+        ]);
+
+        Post::factory(3)->create([
+            'user_id' => $asshole->id,
+            'category_id' => $poodle->id,
+        ]);
+
+        Post::factory(3)->create([
+            'user_id' => $asshole->id,
+            'category_id' => $person->id,
+        ]);
+
+        Post::factory(3)->create([
+            'user_id' => $asshole->id,
             'category_id' => $magnet->id,
         ]);
     }

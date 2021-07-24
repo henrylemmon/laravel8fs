@@ -43,32 +43,32 @@ class DatabaseSeeder extends Seeder
             'slug' => 'magnet',
         ]);
 
-        Post::factory(3)->create([
+        Post::factory(6)->create([
             'user_id' => $henry->id,
             'category_id' => $poodle->id,
         ]);
 
-        Post::factory(3)->create([
+        Post::factory(6)->create([
             'user_id' => $henry->id,
             'category_id' => $person->id,
         ]);
 
-        Post::factory(3)->create([
+        Post::factory(6)->create([
             'user_id' => $henry->id,
             'category_id' => $magnet->id,
         ]);
 
-        Post::factory(3)->create([
+        Post::factory(6)->create([
             'user_id' => $asshole->id,
             'category_id' => $poodle->id,
         ]);
 
-        Post::factory(3)->create([
+        Post::factory(6)->create([
             'user_id' => $asshole->id,
             'category_id' => $person->id,
         ]);
 
-        Post::factory(3)->create([
+        Post::factory(6)->create([
             'user_id' => $asshole->id,
             'category_id' => $magnet->id,
         ]);

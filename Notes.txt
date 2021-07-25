@@ -1,1 +1,12 @@
 @ episode 39 complete
+
+
+
+npm install animate.css --save
+
+inside main.js
+import 'animate.css'
+
+animate__animated
+animate__slideInRight
+animate__slideOutRight

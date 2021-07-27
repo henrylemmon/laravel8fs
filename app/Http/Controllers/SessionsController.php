@@ -14,13 +14,19 @@ class SessionsController extends Controller
     public function store()
     {
         // validate
-        $attributes = request()->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required'],
+        $creds = request()->validate([
+            'email' => 'required|email',
+            'password' => 'required',
         ]);
 
+        /*if (auth()->attempt($creds)) {
+            session()->regenerate();
+
+            return redirect('/')->with('success', 'You have been logged in.');
+        }*/
+
         // authenticate
-        if (! auth()->attempt($attributes)) {
+        if (! auth()->attempt($creds)) {
             throw ValidationException::withMessages([
                 'email' => 'The provided credentials are invalid'
             ]);

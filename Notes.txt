@@ -1,5 +1,4 @@
-@ episode 39 complete
-
+@ episode 55 @5:00min
 
 
 npm install animate.css --save

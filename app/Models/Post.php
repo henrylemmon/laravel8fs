@@ -9,7 +9,8 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    // Model::ungard(); in AppServiceProvider boot method
+    /*protected $guarded = [];*/
 
     protected $with = ['category', 'author'];
 
@@ -56,5 +57,10 @@ class Post extends Model
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 }

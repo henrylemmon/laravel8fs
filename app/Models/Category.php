@@ -9,6 +9,8 @@ class Category extends Model
 {
     use HasFactory;
 
+    // Model::ungard(); in AppServiceProvider boot method
+
     public function posts()
     {
         return $this->hasMany(Post::class);

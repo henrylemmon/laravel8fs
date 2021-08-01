@@ -9,8 +9,3 @@ import 'animate.css'
 animate__animated
 animate__slideInRight
 animate__slideOutRight
-
-mailchimp.com
-henrylemmon
-@Cleanup5744265
-api key : 77b8e6b89413c37baee12f915efc5f43-us6

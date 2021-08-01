@@ -4,28 +4,21 @@
             @csrf
 
             <div>
-                <header class="flex items-center">
+                <header class="flex items-center mb-4">
                     <img src="https://i.pravatar.cc/40?u={{ auth()->id() }}" alt="" width="40" height="40"
                          class="rounded-full">
                     <h2 class="ml-3">Want to participate?</h2>
                 </header>
-                <div>
-                    <textarea
+
+                <x-form.field>
+                    <x-form.textarea
                         name="body"
-                        rows="5"
-                        placeholder="Asshole"
-                        class="w-full mt-1 py-1 px-3 rounded border border-gray-200 mt-4"></textarea>
-                    @error('body')
-                        <span class="text-red-500 text-xs italic" role="alert">
-                            {{ $message }}
-                        </span>
-                    @enderror
-                </div>
+                    ></x-form.textarea>
+                </x-form.field>
                 <div class="flex justify-end">
-                    <button type="submit"
-                            class="bg-blue-500 hover:bg-blue-600 rounded-lg text-white py-1 px-4 focus:outline-none mt-4">
+                    <x-form.button>
                         Post Comment
-                    </button>
+                    </x-form.button>
                 </div>
             </div>
         </form>

@@ -13,6 +13,7 @@
                         name="email"
                         class="w-full mt-1 py-1 px-3 rounded border border-gray-200 focus:outline-none focus:ring focus:border-blue-300"
                         value="{{ old('email') }}"
+                        autocomplete="username"
                     >
                     {{--@if ($errors->any())
                        @foreach ($errors->all() as $error)

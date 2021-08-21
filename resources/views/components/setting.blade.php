@@ -3,17 +3,20 @@
 <section class="px-6 py-8">
     <h3 class="font-semibold mb-8 pb-4 border-b text-2xl">{{ $heading }}</h3>
     <div class="flex">
-        <aside class="w-48">
+        <aside class="w-48 flex-shrink-0">
             <h4 class="font-semibold mb-6 uppercase">Links</h4>
             <ul>
                 <li>
+                    <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'text-blue-500' : '' }}">
+                        All Posts
+                    </a>
+                </li>
+
+                <li>
                     <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'text-blue-500' : '' }}">
                         New Post
-                    </a></li>
-
-                <a href="/admin/dashboard" class="{{ request()->is('admin/dashboard') ? 'text-blue-500' : '' }}">
-                    Dashboard
-                </a></li>
+                    </a>
+                </li>
             </ul>
         </aside>
 

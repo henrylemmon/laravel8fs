@@ -15,7 +15,7 @@
                     @foreach(\App\Models\Category::all() as $category)
                         <option
                             value="{{ $category->id }}"
-                            {{ old('category_id') == $category->id ? 'selected' : '' }}
+                            {{ old('category_id', $post->category_id) == $category->id ? 'selected' : '' }}
                         >
                             {{ ucwords($category->name) }}
                         </option>

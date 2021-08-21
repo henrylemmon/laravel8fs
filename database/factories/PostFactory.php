@@ -26,11 +26,11 @@ class PostFactory extends Factory
         return [
             'user_id' => User::factory(),
             'category_id' => Category::factory(),
-            'title' => $this->faker->sentence(),
+            'title' => $this->faker->sentence(3),
             'thumbnail' => '/thumbnails/PWczpoqxmXkkBpK3OB20iN7VQ07kF6AZCkFpr2Zp.png',
             'slug' => $this->faker->slug(),
-            'excerpt' => '<p>' . implode('</p><p>', $this->faker->paragraphs(2)) . '</p>',
-            'body' => '<p>' . implode('</p><p>', $this->faker->paragraphs(6)) . '</p>',
+            'excerpt' => '<p>' . $this->faker->paragraph() . '</p>',
+            'body' => '<p>' . implode('</p><p>', $this->faker->paragraphs(2)) . '</p>',
         ];
     }
 }

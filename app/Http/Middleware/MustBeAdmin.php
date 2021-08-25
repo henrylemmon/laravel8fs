@@ -14,6 +14,8 @@ class MustBeAdmin
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
      * @return mixed
+     *
+     * Been discontinued
      */
     public function handle(Request $request, Closure $next)
     {
